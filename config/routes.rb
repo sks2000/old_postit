@@ -1,6 +1,10 @@
 Postit::Application.routes.draw do
   root to: 'posts#index'
 
+  #match '/posts/:id' => 'posts#show'   
+  resources :posts, :only => [:index, :show]
+  resources :users, :only => [:index, :show]
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

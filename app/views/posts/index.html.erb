@@ -1,1 +1,9 @@
-hi there sid
+<h2>Posts</h2>
+
+<ul>
+<% @posts.each do |p| %>
+  <li>
+  	<%= link_to p.title, "/posts/#{p.id}" %>
+  </li>
+<% end %>
+</ul>

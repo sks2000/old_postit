@@ -1,0 +1,14 @@
+<h3><%= @post.title %></h3>
+<p> 
+  <%= @post.body %><br>
+  <b><%= "Posted by #{@post.user.name} on #{@post.created_at}" %></b>
+</p>
+<h4>Comments:</h4>
+<ul>
+<% @post.comments.each do |c| %>
+  <li>
+  	<%= c.body %><br>
+  	<%= "Posted by #{c.user.name} on #{c.created_at}" %>
+  </li>
+<% end %>
+</ul>
